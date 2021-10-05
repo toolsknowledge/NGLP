@@ -1,0 +1,283 @@
+MiniProject Implementation
+**************************
+
+1) DataBase
+
+    Ex.
+        MongoDB
+
+
+2) Server
+
+    Ex.
+        Node Server
+
+
+3) Frontend
+
+    Ex.
+        Angular with NgRx
+
+
+DataBase
+********
+    - MongoDB DataBase is "NoSQL" DataBase.
+
+    - MongoDB DataBase is "JSON" Based DataBase.
+
+    - MongoDB DataBase Supports "mongodb" protocol.
+
+    - MongoDB DataBase by default running on port number "27017".
+
+    - MongoDB DataBase supports the cloud Environment in the form of a "MongoDB Atlas".
+
+
+Cloud URL : https://account.mongodb.com/account/login
+
+DataBase Details
+****************
+DataBase Name : ngrx-7am
+
+Collection Name : products
+
+Password : admin
+
+Connection URL : mongodb+srv://admin:admin@miniprojectdb.nzphu.mongodb.net/ngrx-7am?retryWrites=true&w=majority
+
+
+Server
+******
+                                ---- Node Server ----
+
+    - NodeJS is "Backend" Technology.
+
+    - NodeJS, used to implement the "Servers".
+
+    - we will build "NodeJS" Applications with the help of "JavaScript".
+
+    - NodeJS Supports the "Modules".
+
+    - we will download "Node Modules" with the help of either "npm" tool, or "yarn" tool.
+
+    - "npm" stands for "Node Packaging Manager".
+
+    - "npm" present in "NodeJS".
+
+    - we will install yarn tool by using following command.
+
+        > npm install -g yarn
+
+
+modules in NodeJS
+*****************
+
+1) mongodb
+
+    - mongodb module used to connect to the mongodb DataBase.
+
+2) express
+
+    - express module used to develop the "rest api's"
+
+    Ex.
+        GET
+        POST
+        PUT
+        DELETE
+        ---
+        ---
+        ---
+3) cors
+
+    - used to enable the "ports" communication.
+
+    - also called as enabling the "cors policy"
+
+
+> yarn add express mongodb cors
+
+server.js
+*********
+
+start the server
+****************
+
+> cd miniproject-server
+
+> node server
+
+
+test the rest api's by using Postman
+*************************************
+
+=> http://localhost:8080/fetch   (GET)
+
+=> http://localhost:8080/insert  (POST)
+
+=> http://localhost:8080/update  (PUT)
+
+=> http://localhost:8080/delete  (DELETE)
+
+
+
+Integration of Rest API calls to Angular Application with NgRx Package
+**********************************************************************
+    Angular Applications are Component Based Applications.
+
+    As a Angular Developer, we can create more than one Component.
+
+    As a Angular Developer, we can provide communication between components.
+
+    providing the communication between components are difficult while incresing the complexity.
+
+    maintaining the "store" at client side called as state management.
+
+    because of state management, automatically application complexity reduces.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+miniproject
+         src
+           app
+             fetch
+                model
+                    fetch.model.ts                  (completed)
+                services
+                    fetch.service.ts                (completed)
+                actions
+                    fetch.actions.ts                ()
+                effects
+                    fetch.effects.ts
+                reducer
+                    fetch.reducer.ts
+                module
+                    fetch.module.ts
+                selector
+                    fetch.selector.ts
+                components
+                    fetch.component.ts
+                    fetch.component.html
+             insert
+
+             update
+
+             delete
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

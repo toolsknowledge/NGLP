@@ -1,0 +1,587 @@
+Single Page Applications
+************************
+    - loading one component to another component without refreshing the whole webpage called single page Application.
+
+    - navigation from one component to another component called as Routing.
+
+
+
+step 1.
+    create the angular application
+
+    > ng new spaDemo1
+
+
+step 2.
+    switch to angular application
+
+    > cd spaDemo1
+
+
+step 3.
+    create the components
+
+    >  ng g c master --skip-tests --selector=master -is --flat true
+
+    > ng g c shirts --skip-tests --selector=shirts -is --flat true
+
+    > ng g c pants --skip-tests --selector=pants -is --flat true
+
+    > ng g c kids --skip-tests --selector=kids -is --flat true
+
+
+    where "MasterComponent" is the main component.
+
+    where ShirtsComponent,Pantscomponent,KidsComponent are target components.
+
+
+
+step 4.
+    implement the business logic in target components
+
+
+step 5.
+    create the router links
+
+
+
+step 6.
+    implement the routing
+
+
+
+child routing
+*************
+
+1) create the child components
+
+    => NikiComponent
+
+    => PoloComponent
+
+    => JeansComponent
+
+
+2) implement the business logic in child components
+
+3) create the router links
+
+4) create the child routes
+
+
+AUTHENICATION GURADS
+********************
+1) CanActivate
+
+2) CanDeactivate
+
+3) CanActivateChild
+
+
+> ng g s auth --skip-tests
+
+
+
+
+spaDemo2
+********
+
+1) CamerasModule
+
+2) AcsModule
+
+3) WMModule
+
+
+CamerasModule
+*************
+
+1) deploy images to AWS S3 Bucket
+
+cloud images
+************
+https://spaangbucket.s3.us-east-2.amazonaws.com/ACS1.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/ACS2.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/ACS3.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/ACS4.jpg
+
+
+
+https://spaangbucket.s3.us-east-2.amazonaws.com/CAMERA1.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/CAMERA2.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/CAMERA3.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/CAMERA4.jpg
+
+
+
+https://spaangbucket.s3.us-east-2.amazonaws.com/WM1.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/WM2.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/WM3.jpg
+https://spaangbucket.s3.us-east-2.amazonaws.com/WM4.jpg
+
+
+
+
+3) save above images path to MongoDB Atlas
+
+name of database : angspa
+
+collections name : acs
+                   cameras
+                   wms
+
+
+connection url : mongodb+srv://admin:admin@miniprojectdb.nzphu.mongodb.net/angspa?retryWrites=true&w=majority
+
+
+
+4) implement the node server
+
+        node server implements the rest api call.
+
+    => create the directory
+
+    Ex.
+         server
+
+
+    => switch to server directory
+
+        > cd server
+
+
+    => download the node modules
+
+           1) express
+
+           2) mongodb
+
+           3) cors
+
+
+            > yarn add express mongodb cors 
+
+
+        express library used to develop the rest api calls.
+
+        Ex.
+                GET
+                POST
+                PUT
+                DELETE
+                ----
+                ----
+                ----
+        mongodb library used to connect to mongodb database.
+
+        cors library used to enable the ports communication
+
+    => develop the rest api
+
+            server.js
+
+
+    => start the node server
+
+        > node server
+
+
+    => test the rest api call by using Postman
+
+        http://localhost:8080/products/acs
+                                       cameras
+                                       wms
+
+
+Frontend
+********
+
+1) create the angular application
+
+    > ng new spaDemo2
+
+2) switch to spaDemo2
+
+    > cd spaDemo2
+
+
+3) create the service to make asynchronous call
+
+    ****************************************
+    spaDemo2 
+           src
+              app
+                 commom
+                        model
+                            product.model.ts
+                        services
+                            product.service.ts
+                        module
+                            shared.module.ts
+    ***************************************** 
+
+
+    4) create the modules
+
+            ACSModule
+
+            VMSModule
+
+            CAMERASModule
+
+
+***************************************
+acs
+   component
+       acs.component.ts
+   module
+       acs.module.ts
+***************************************
+
+
+vms
+  component
+     vms.component.ts
+  module
+     vms.module.ts
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+cameras
+     component
+         camera.component.ts
+
+     module
+        camera.module.ts
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+master.component.ts
+master.component.html
+
+app.module.ts
+
+
+AWS Deployment
+**************
+
+1) Frontend Deployment
+
+2) Backend Deployment
+
+Backend Deployment
+******************
+
+Node Server Deployment in AWS
+*****************************
+
+1) push server code to GitHub
+
+    mean_server
+
+
+2) create the "application" in AWS Server
+
+    "ElasicBeanStalk"
+
+    name of the application is : mean_server
+
+
+3) implement the CI / CD Operation
+
+    CodePipeline
+
+
+4) get the "cloud" url from "ElasicBeanStalk" and test with "Postman".
+
+    URL : Meanserver-env.eba-2fccucnx.us-east-2.elasticbeanstalk.com/products
+
+    Meanserver-env.eba-2fccucnx.us-east-2.elasticbeanstalk.com/products/acs
+
+
+Frontend Deployment
+*******************
+
+1) configure the above rest api in "angular" application
+
+2) prepare build file
+
+    > ng build
+
+        o/p : dist
+
+3) push "dist" folder to aws server "s3" bucket
+
+    Properties
+    +++++++++++
+        Static Web Hosting
+
+        http://meanappl.s3-website.us-east-2.amazonaws.com
+
+
+    Permissions
+    +++++++++++
+
+    Bucket Policy
+    
+    {
+        "Version":"2012-10-17",
+        "Statement":[
+        {
+            "Sid":"AddPerm",
+            "Effect":"Allow",
+            "Principal": "*",
+            "Action":["s3:GetObject"],
+            "Resource":["arn:aws:s3:::meanappl/*"]
+        }
+    ]
+    }
+
+4) prepare the keys
+
+    1) access id
+
+    2) secrete key
+
+
+    IAM
+
+
+5) install AWS Cli tool
+
+    website : https://aws.amazon.com/cli/
+
+    file    : AWSCLIV2.msi
+
+
+6) edit the package.json
+
+    "aws-deploy":"aws s3 sync dist/spaDemo2/ s3://meanappl"
+
+
+7) execute the following commands.
+
+    > aws configure
+
+    > ng build && npm run aws-deploy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

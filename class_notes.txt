@@ -1,0 +1,350 @@
+Day-1
+*****
+
+Syllabus:
+*********
+
+1) Introduction to Angular12
+
+2) Installation of Angular12
+
+3) RxJS with Unit Test Cases Degugging
+
+4) NgRx with Unit Test Cases Degugging
+
+5) Single Page Applications with Unit Test Cases Degugging
+
+6) Lazy Loading
+
+7) Modules Communications
+
+8) CSS3 Concepts
+
+    Flex Box
+
+    Grid Box
+
+    Media Queries (Responsive Web Design)
+
+***************************************************************************
+
+1) MiniProject
+
+
+2) Major Project
+
+
+=> MEAN Stack Development
+
+    M - MongoDB
+
+    E - ExpressJS
+
+    A - Angular
+
+    N - NodeJS / Spring Boot / .net
+
+
+=> Cloud
+
+    AWS
+
+=> Secuirity 
+
+=> Performance Optimization Techniques
+
+Introduction to Angular
+***********************
+    - Angular is the JavaScript Framework and given by google.
+
+    - Angular divided into
+
+       1) AngularJS
+
+            - web applications
+
+            - JavaScript
+
+       2) Angular2
+
+            - web applications and mobile applications
+
+            - Angular12
+
+            - TypeScript
+
+            - Programming Language
+
+            - Microsoft
+
+            - OOPS
+
+       3) Angular Material
+
+            - used to apply the rich ui to both web applications and mobile applications
+
+
+
+Installation of Angular12
+*************************
+
+    - npm helps to Angular12
+
+    - npm stands for node packaging manager
+
+    - npm available in NodeJS.
+
+1) download and install NodeJS
+
+
+website : https://nodejs.org/en/
+
+file    : node-v16.9.0-x64.msi
+
+
+2) install yarn tool
+
+   
+    yarn tool given by facebook
+
+    yarn tool, used to download the 3rd party libraries
+
+    yarn tool Installation is command based Installation
+
+    > npm install -g yarn    
+
+
+3) install angular cli
+
+    command line interface
+
+    create and execute the angular applications
+
+    cli installation also command based installation
+
+    > npm install -g @angular/cli
+
+
+4) link the yarn tool to cli tool
+
+    > ng config --global cli.packageManager yarn
+
+Day-2
+*****
+
+step 1.
+    create the angular application
+
+    > ng new firstApp
+
+step 2.
+    switch to angular application
+
+    > cd firstApp
+
+step 3.
+    execute angular application
+
+    > ng s -o
+
+    s stands for serve
+
+    -o stands for open the default browser
+
+    default port number : 4200
+
+
+- all the components,services,directives,pipes....should deploy into "app" folder.
+
+- we should register in app.module.ts file.
+
+- index.html file is the main template
+
+- angular Framework starts the execution from index.html file.
+
+
+firstApp
+      src
+        app
+          first.component.ts
+          first.component.html
+
+          app.module.ts
+        index.html
+
+
+*******************************************************
+components-app
+             src
+                app
+                  frontend.component.ts
+                  frontend.component.html
+
+                  backend.component.ts
+                  backend.component.html
+
+                  database.component.ts
+                  database.component.html
+
+                  mean.component.ts
+                  mean.component.html
+
+                  app.module.ts
+                index.html
+**********************************************************************
+
+
+mongodb
+*******
+    mongodb is NoSQL database.
+
+    mongodb supports the json.
+
+    mongodb is "light" weight database.
+
+    mongodb database by default running on port "27017"
+
+    mongodb supports the Cloud environment with "MongoDB Atlas"
+
+
+URL : https://account.mongodb.com/account/login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

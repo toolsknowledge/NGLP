@@ -140,22 +140,39 @@ miniproject
            app
              fetch
                 model
-                    fetch.model.ts                  (completed)
+                    product.model.ts                  (completed)
+                        finally "Product" model is ready
                 services
-                    fetch.service.ts                (completed)
+                    product.service.ts                (completed)
+                        finally "ProductService" is ready
+                types
+                    product.types.ts
+                        finally following types are ready.
+                            1) PRODUCTS_LOADING
+                            2) PRODUCTS_LOADING_SUCCESS
+                            3) PRODUCTS_LOADING_FAIL
                 actions
-                    fetch.actions.ts                ()
+                    product.actions.ts
+                        finally following actions are ready
+                            1) ProductsLoading
+                            2) ProductsLoadingSuccess
+                            3) ProductsLoadingFail
                 effects
-                    fetch.effects.ts
+                    products.effects.
+                        finally ProductEffects is ready.
                 reducer
-                    fetch.reducer.ts
+                    products.reducer.ts
+                        finally "ProductsReducer" is ready
+
                 module
-                    fetch.module.ts
+                    products.module.ts
+                        ProductsModule also ready
                 selector
                     fetch.selector.ts
                 components
                     fetch.component.ts
                     fetch.component.html
+             
              insert
 
              update

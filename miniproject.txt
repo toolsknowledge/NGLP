@@ -183,6 +183,97 @@ miniproject
 
 
 
+Revision
+********
+> ng new state-management-ex
+
+> cd state-management-ex
+
+> yarn add @ngrx/store @ngrx/effects
+
+
+***********************************************************
+state-management-ex
+                  src
+                    app
+                      fetch
+                         components
+                             fetch.component.ts
+                             fetch.component.html
+
+                         model
+                            fetch.model.ts
+
+                         service
+                            fetch.service.ts
+
+                         module
+                            fetch.module.ts
+
+                        state
+                            fetch.state.ts
+
+                         types
+                            fetch.types.ts
+
+                         actions
+                            fetch.actions.ts
+
+                         effects
+                            fetch.effects.ts
+
+                         reducer
+                            fetch.reducer.ts
+
+                         selector
+                            fetch.selector.ts
+
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
